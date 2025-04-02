@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js with ShadCN Project
 
-## Getting Started
+## 🚀 Overview
+This is a Next.js project using **ShadCN** and **Tailwind CSS** for styling. The project is designed with a **dark theme by default** and follows modern UI/UX principles.
 
-First, run the development server:
+## 🛠️ Tech Stack
+- **Next.js** (React framework for SSR and SSG)
+- **ShadCN** (Component library based on Radix UI)
+- **Tailwind CSS** (Utility-first CSS framework)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 📂 Project Structure
+```
+📦 my-nextjs-project
+├── 📂 app/        # Main application pages & layout
+├── 📂 components/ # Reusable UI components
+├── 📂 styles/     # Global styles and Tailwind config
+├── 📜 next.config.js  # Next.js configuration
+├── 📜 tailwind.config.js  # Tailwind configuration
+├── 📜 package.json  # Dependencies and scripts
+└── 📜 README.md  # Project documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🖥️ Installation & Setup
+To set up and run the project locally, follow these steps:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/JaiMishra25/gridShadCN.git
+   cd my-app
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   ```
 
-## Learn More
+2. **Install dependencies:**
+   ```sh
+   npm install
+   # or
+   yarn install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. **Run the development server:**
+   ```sh
+   npm run dev
+   # or
+   yarn dev
+   ```
+   The app will be running at **http://localhost:3000**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌑 Default Dark Mode
+This project is configured to use a **dark theme by default**. Styles are defined in `global.css` using CSS variables for both light and dark themes.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Deployment
+### **GitHub Pages (Static Export)**
+1. Update `next.config.js`:
+   ```js
+   module.exports = {
+     output: "export",
+     images: { unoptimized: true },
+     basePath: "/your-repo",
+   };
+   ```
+2. Export the project:
+   ```sh
+   npm run build && npm run export
+   ```
+3. Deploy `out/` folder to `gh-pages` branch.
 
-## Deploy on Vercel
+### **Vercel (Recommended)**
+1. Install Vercel CLI:
+   ```sh
+   npm install -g vercel
+   ```
+2. Deploy:
+   ```sh
+   vercel
+   ```
+3. Follow the on-screen steps, and your site will be live!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📜 License
+This project is licensed under the **MIT License**.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📞 Support
+For any questions or support, feel free to open an issue or reach out to me!
+
